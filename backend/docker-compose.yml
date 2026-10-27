@@ -1,0 +1,38 @@
+
+services:
+  backend:
+    build:
+      context: ./backend/FarmersMarket
+      dockerfile: Dockerfile
+    image: samyojitha/docker-backend-2400032211:latest
+    container_name: farmersmarket-backend
+    ports:
+      - "1000:1000"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/farmersmarketdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    restart: on-failure
+    networks:
+      - farmersmarket-net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: samyojitha/docker-frontend-2400032211:latest
+    container_name: farmersmarket-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: on-failure
+    networks:
+      - farmersmarket-net
+
+volumes:
+  farmersmarket_data:
+
+networks:
+  farmersmarket-net:
+    driver: bridge

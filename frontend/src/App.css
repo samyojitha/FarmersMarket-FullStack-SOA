@@ -1,0 +1,359 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #263c2e;
+  background: #f5f7f0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top left, #eaf3e4 0%, transparent 42%),
+    #f5f7f0;
+  font-family: 'DM Sans', sans-serif;
+  color: #263c2e;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.market-page {
+  min-height: 100vh;
+}
+
+/* Navigation */
+.navbar.bg-success {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid #e4eade;
+  padding: 18px 0;
+}
+
+.navbar-brand {
+  color: #28583a !important;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: -0.6px;
+}
+
+.navbar .text-white {
+  color: #718071 !important;
+  font-size: 0.9rem;
+}
+
+/* Main content */
+.market-page main.container {
+  max-width: 1180px;
+  padding-top: 34px !important;
+}
+
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 36px !important;
+  border: 1px solid #dce9d5;
+  border-radius: 24px !important;
+  background: linear-gradient(120deg, #e4f1dd, #fafff6 75%);
+  box-shadow: 0 8px 30px rgba(55, 92, 52, 0.05);
+}
+
+.hero-banner::after {
+  content: '🌿';
+  position: absolute;
+  right: 38px;
+  top: 16px;
+  font-size: 75px;
+  opacity: 0.6;
+  transform: rotate(-12deg);
+}
+
+.hero-banner h1 {
+  max-width: 700px;
+  color: #28583a;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+}
+
+.hero-banner p {
+  color: #657c65;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+/* Cards */
+.card {
+  overflow: hidden;
+  border: 1px solid #e4eadd !important;
+  border-radius: 18px !important;
+  background: #ffffff;
+  box-shadow: 0 6px 24px rgba(39, 65, 39, 0.045) !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 28px rgba(39, 65, 39, 0.075) !important;
+}
+
+.card-header {
+  border-bottom: 1px solid #edf0e8 !important;
+  background: #fff !important;
+  padding: 20px 24px !important;
+}
+
+.card-header h2,
+.card-body h2 {
+  color: #2b5037;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 750;
+}
+
+.card-body {
+  padding: 25px !important;
+}
+
+/* Forms */
+.form-label {
+  margin-bottom: 8px;
+  color: #405a45;
+  font-size: 0.91rem;
+  font-weight: 600;
+}
+
+.form-control,
+.form-select {
+  min-height: 46px;
+  border: 1px solid #dfe6da;
+  border-radius: 10px;
+  background-color: #fcfdfb;
+  color: #263c2e;
+  font-size: 0.94rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control::placeholder {
+  color: #a0aca0;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #78a981;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(91, 151, 100, 0.12);
+}
+
+.form-check-input {
+  border-color: #b9cbb6;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  border-color: #39784b;
+  background-color: #39784b;
+}
+
+.form-check-label {
+  color: #405a45;
+  cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+  min-height: 40px;
+  border-radius: 10px;
+  padding: 9px 17px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-success {
+  border-color: #34784a;
+  background: #34784a;
+  box-shadow: 0 3px 8px rgba(52, 120, 74, 0.12);
+}
+
+.btn-success:hover {
+  border-color: #285f3a;
+  background: #285f3a;
+  transform: translateY(-1px);
+}
+
+.btn-outline-success {
+  border-color: #b9d4b9;
+  color: #34784a;
+}
+
+.btn-outline-success:hover {
+  border-color: #34784a;
+  background: #34784a;
+  color: white;
+}
+
+.btn-outline-secondary {
+  border-color: #dfe6da;
+  color: #607261;
+}
+
+.btn-outline-secondary:hover {
+  border-color: #cbd7c6;
+  background: #f0f4ed;
+  color: #2b5037;
+}
+
+.btn-outline-primary {
+  border-color: #c6d8e8;
+  color: #386d8d;
+}
+
+.btn-outline-primary:hover {
+  background: #386d8d;
+  color: white;
+}
+
+.btn-outline-danger {
+  border-color: #f0d2ce;
+  color: #b14d43;
+}
+
+.btn-outline-danger:hover {
+  background: #b14d43;
+  color: white;
+}
+
+/* Alerts */
+.alert {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 14px 18px;
+}
+
+.alert-success {
+  border-color: #d4e8d0;
+  background: #edf7e9;
+  color: #2f693c;
+}
+
+.alert-danger {
+  border-color: #f0d5d1;
+  background: #fff0ed;
+  color: #a33d35;
+}
+
+/* Market table */
+.table-responsive {
+  border-radius: 0 0 18px 18px;
+}
+
+.table {
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+
+.table-success {
+  --bs-table-bg: #edf5e8;
+  --bs-table-color: #365a3d;
+  --bs-table-border-color: #e3ebdc;
+}
+
+.table thead th {
+  padding: 16px 18px;
+  border-bottom: 1px solid #dfe8d9;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+}
+
+.table tbody td {
+  padding: 16px 18px;
+  border-color: #edf0e9;
+  color: #465b49;
+  font-size: 0.9rem;
+}
+
+.table tbody tr:hover > * {
+  --bs-table-bg-state: #f8fbf5;
+}
+
+.table th,
+.table td {
+  white-space: nowrap;
+}
+
+.badge {
+  border-radius: 7px;
+  padding: 7px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.text-bg-success {
+  background: #e2f2df !important;
+  color: #347044 !important;
+}
+
+.text-bg-secondary {
+  background: #eef0eb !important;
+  color: #687568 !important;
+}
+
+/* Footer */
+footer {
+  color: #839082 !important;
+  font-size: 0.85rem;
+  padding: 28px 12px !important;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .market-page main.container {
+    padding-top: 20px !important;
+  }
+
+  .hero-banner {
+    padding: 24px !important;
+    border-radius: 18px !important;
+  }
+
+  .hero-banner::after {
+    right: 14px;
+    top: 12px;
+    font-size: 42px;
+    opacity: 0.35;
+  }
+
+  .hero-banner h1 {
+    max-width: 80%;
+    font-size: 1.8rem;
+  }
+
+  .hero-banner p {
+    max-width: 85%;
+    font-size: 0.9rem;
+  }
+
+  .card-body {
+    padding: 18px !important;
+  }
+
+  .navbar .text-white {
+    display: none;
+  }
+
+  .table thead th,
+  .table tbody td {
+    padding: 12px;
+  }
+}
